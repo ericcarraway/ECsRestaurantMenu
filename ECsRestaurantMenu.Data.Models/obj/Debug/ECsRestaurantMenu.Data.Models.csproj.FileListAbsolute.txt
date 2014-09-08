@@ -1,0 +1,14 @@
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\ECsRestaurantMenu.Data.Models.dll.config
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\ECsRestaurantMenu.Data.Models.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\ECsRestaurantMenu.Data.Models.pdb
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\EntityFramework.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\EntityFramework.xml
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\obj\Debug\ECsRestaurantMenu.Data.Models.csprojResolveAssemblyReference.cache
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\obj\Debug\ECsRestaurantMenu.Data.Models.dll
+C:\Projects\ECsRestaurantMenu\ECsRestaurantMenu.Data.Models\obj\Debug\ECsRestaurantMenu.Data.Models.pdb
