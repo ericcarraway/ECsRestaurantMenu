@@ -1,7 +1,7 @@
 var Items = Backbone.Collection.extend({
-    url: '/MenuItems'
+    url: 'api/MenuItems'
 });
 
 var Item = Backbone.Model.extend({
-    urlRoot: '/MenuItems'
+    urlRoot: 'api/MenuItems'
 });

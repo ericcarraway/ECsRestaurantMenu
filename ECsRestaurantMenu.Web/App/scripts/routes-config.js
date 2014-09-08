@@ -53,6 +53,6 @@ $.fn.convertFormToJSON = function () {
 $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
     //options.url = '/api/MenuItems/' + options.url;
     
-    options.url = 'http://ecsrestaurantmenu.apphb.com/api' + options.url;
+    options.url = 'http://ecsrestaurantmenu.apphb.com' + options.url;
 
 });
