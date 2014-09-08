@@ -216,6 +216,7 @@
     <Content Include="App\scripts\lib\backbone-min.js" />
     <Content Include="App\scripts\lib\jquery-2.1.1.min.js" />
     <Content Include="App\scripts\lib\underscore-min.js" />
+    <Content Include="App\scripts\lib\underscore.js" />
     <Content Include="App\scripts\models.js" />
     <Content Include="App\scripts\routes-config.js" />
     <Content Include="App\scripts\views.js" />
