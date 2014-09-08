@@ -12,11 +12,15 @@
         <hr />
         <div class="page"></div>
     </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
     
-    <!-- temporarily using the un-minified versions for debugging -->
-    <script src="scripts/lib/jquery-2.1.1.js"></script>
+    <!-- un-minified versions when debugging -->
+    <!--<script src="scripts/lib/jquery-2.1.1.js"></script>
     <script src="scripts/lib/underscore.js"></script>
-    <script src="scripts/lib/backbone.js"></script>
+    <script src="scripts/lib/backbone.js"></script>-->
 
     <!-- data-binding templates inline placed on the HTML page for ease of maintenance and syntax highlighting in the editor -->
     <!-- definining the type as "text/template" keeps them from being interpreted by the browser as JavaScript -->
@@ -38,7 +42,7 @@
                     <td><%= htmlEncode(item.get('Name')) %></td>
                     <td><%= htmlEncode(item.get('Price')) %></td>
                     <td><img src="<%= htmlEncode(item.get('PicUrl')) %>" /></td>
-                    <td><a class="btn" href="#/edit/<%= item.Id %>">Edit</a></td>
+                    <td><a class="btn" href="#/edit/<%= htmlEncode(item.get('Id')) %>">Edit</a></td>
                 </tr>
                 <% }); %>
             </tbody>
@@ -46,8 +50,8 @@
     </script>
 
     <script type="text/template" id="edit-item-template">
-        <form class="edit--form">
-            <legend><%= item ? 'Edit' : 'New' %> Menu Item</legend>
+        <form class="edit-item-form">
+            <legend><%= item ? 'Edit' : 'New' %> Item</legend>
             <label>Name</label>
             <input name="Name" type="text" value="<%= item ? item.get('Name') : '' %>" />
             <label>Price</label>
@@ -55,10 +59,11 @@
             <label>Picture URL</label>
             <input name="PicUrl" type="text" value="<%= item ? item.get('PicUrl') : '' %>" />
             <hr />
-            <button type="submit" class="btn"><%= item ? 'Update' : 'Create' %></button>
+            <button type="submit" class="btn"><%= item ? 'Update Item' : 'Create New Item' %></button>
             <% if(item) { %>
-            <input type="hidden" name="Id" value="<%= item.Id %>" />
-            <button data-item-id="<%= item.Id %>" class="btn btn-danger delete">Delete</button>
+            <input type="hidden" name="Id" value="<%= item.get('Id') %>" />
+            <!-- TODO: perhaps fix CSharp PascalCasing in backend schema to match JavaScript camelCasing convention -->
+            <button data-item-Id="<%= item.Id %>" class="btn btn-danger delete">Delete</button>
             <% }; %>
         </form>
     </script>

@@ -10,7 +10,7 @@ var ItemListView = Backbone.View.extend({
         items.fetch({
             success: function (items) {
                 // grab the template by id from the DOM with a jQuery selector
-                var template = _.template($('#item-list-template').html());
+                var template = _.template($('#items-list-template').html());
                 // populate the template with the results from the server
                 that.$el.html(template({ items: items.models }));
             }
@@ -25,12 +25,14 @@ var itemListView = new ItemListView();
 var ItemEditView = Backbone.View.extend({
     el: '.page',
     events: {
+        // on this event : execute this function
         'submit .edit-item-form': 'saveItem',
         'click .delete': 'deleteItem'
     },
     saveItem: function (ev) {
         var itemDetails = $(ev.currentTarget).convertFormToJSON();
         var item = new Item();
+        // PUT / POST via AJAX
         item.save(itemDetails, {
             success: function (item) {
                 router.navigate('', { trigger: true });
@@ -53,9 +55,9 @@ var ItemEditView = Backbone.View.extend({
     },
     render: function (options) {
         var that = this;
-        // "Update" CRUD operation (Id property already exists)
-        if (options.Id) {
-            that.item = new Item({ Id: options.Id });
+        // "Update" CRUD operation (id property already exists)
+        if (options.id) {
+            that.item = new Item({ id: options.id });
             // GET the item from the server based on the Id
             that.item.fetch({
                 success: function (item) {

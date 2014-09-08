@@ -2,6 +2,7 @@ var Router = Backbone.Router.extend({
     routes: {
         "": "home",
         // edit and new share a view
+        // TODO: casing of Id / id ?
         "edit/:id": "edit",
         "new": "edit"
     }
@@ -49,10 +50,10 @@ $.fn.convertFormToJSON = function () {
     return json;
 };
 
-//  prepend to all AJAX requests
-$.ajaxPrefilter(function (options, originalOptions, jqXHR) {
-    //options.url = '/api/MenuItems/' + options.url;
+////  prepend to all AJAX requests (comment out to use local Db during developement)
+//$.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+//    //options.url = '/api/MenuItems/' + options.url;
     
-    options.url = 'http://ecsrestaurantmenu.apphb.com' + options.url;
+//    options.url = 'http://ecsrestaurantmenu.apphb.com' + options.url;
 
-});
+//});
