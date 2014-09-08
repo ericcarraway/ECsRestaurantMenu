@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EC's Restaurant Menu</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>EC's Restaurant Menu</h1>
+        <hr />
+        <div class="page"></div>
+    </div>
+
+    <script src="scripts/lib/jquery-2.1.1.min.js"></script>
+    <script src="scripts/lib/underscore-min.js"></script>
+    <script src="scripts/lib/backbone-min.js"></script>
+
+
+    <!-- data-binding templates inline placed on the HTML page for ease of maintenance and syntax highlighting in the editor -->
+    <!-- definining the type as "text/template" keeps them from being interpreted by the browser as JavaScript -->
+    <script type="text/template" id="items-list-template">
+        <a href="#/new" class="btn btn-primary">New</a>
+        <hr />
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Picture</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% _.each(items, function(item) { %>
+                <tr>
+                    <td><%= htmlEncode(item.get('Name')) %></td>
+                    <td><%= htmlEncode(item.get('Price')) %></td>
+                    <td><img src="<%= htmlEncode(item.get('PicUrl')) %>" /></td>
+                    <td><a class="btn" href="#/edit/<%= item.Id %>">Edit</a></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </script>
+
+    <script type="text/template" id="edit-item-template">
+        <form class="edit--form">
+            <legend><%= item ? 'Edit' : 'New' %> Menu Item</legend>
+            <label>Name</label>
+            <input name="Name" type="text" value="<%= item ? item.get('Name') : '' %>" />
+            <label>Price</label>
+            <input name="Price" type="text" value="<%= item ? item.get('Price') : '' %>" />
+            <label>Picture URL</label>
+            <input name="PicUrl" type="text" value="<%= item ? item.get('PicUrl') : '' %>" />
+            <hr />
+            <button type="submit" class="btn"><%= item ? 'Update' : 'Create' %></button>
+            <% if(item) { %>
+            <input type="hidden" name="Id" value="<%= item.Id %>" />
+            <button data-item-id="<%= item.Id %>" class="btn btn-danger delete">Delete</button>
+            <% }; %>
+        </form>
+    </script>
+
+    <script src="scripts/models.js"></script>
+    <script src="scripts/views.js"></script>
+    <script src="scripts/routes-config.js"></script>
+
+</body>
+</html>

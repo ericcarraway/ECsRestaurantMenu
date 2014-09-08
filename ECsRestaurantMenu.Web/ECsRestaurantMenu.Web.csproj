@@ -212,6 +212,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\index.html" />
+    <Content Include="App\scripts\lib\backbone-min.js" />
+    <Content Include="App\scripts\lib\jquery-2.1.1.min.js" />
+    <Content Include="App\scripts\lib\underscore-min.js" />
+    <Content Include="App\scripts\models.js" />
+    <Content Include="App\scripts\routes-config.js" />
+    <Content Include="App\scripts\views.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -239,6 +246,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App\scripts\lib\backbone-min.map" />
+    <Content Include="App\scripts\lib\underscore-min.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
