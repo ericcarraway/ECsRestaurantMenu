@@ -61,7 +61,7 @@
             <hr />
             <button type="submit" class="btn"><%= item ? 'Update Item' : 'Create New Item' %></button>
             <% if(item) { %>
-            <input type="hidden" name="Id" value="<%= item.get('Id') %>" />
+            <input type="hidden" name="id" value="<%= item.get('Id') %>" />
             <!-- TODO: perhaps fix CSharp PascalCasing in backend schema to match JavaScript camelCasing convention -->
             <button data-item-Id="<%= item.Id %>" class="btn btn-danger delete">Delete</button>
             <% }; %>
