@@ -14,7 +14,7 @@ var ItemListView = Backbone.View.extend({
                 // populate the template with the results from the server
                 that.$el.html(template({ items: items.models }));
             }
-        })
+        });
     }
 });
 
@@ -64,7 +64,7 @@ var ItemEditView = Backbone.View.extend({
                     var template = _.template($('#edit-item-template').html());
                     that.$el.html(template({ item: item }));
                 }
-            })
+            });
         }
         // "Create" CRUD operation (no Id property exists yet)
         else {

@@ -8,7 +8,7 @@ var Router = Backbone.Router.extend({
     }
 });
 // instantiate the router
-var router = new Router;
+var router = new Router();
 
 // snytax: "on this route, do this anonymous function"
 router.on('route:home', function () {
