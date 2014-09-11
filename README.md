@@ -3,7 +3,7 @@ ECsRestaurantMenu
 
 Example restaurant menu project using Backbone.js on the front end and an ASP.NET Web API RESTful service on the back end
 
-This app is LIVE at http://ecsrestaurantmenu.apphb.com/
+Although it takes a while to load up, this app is LIVE at http://ecsrestaurantmenu.apphb.com/
 
 This is an example project built to demonstrate the following skills to potential employers:
 
