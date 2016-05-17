@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -11,11 +11,10 @@
     <link href="style/style.css" rel="stylesheet">
 </head>
 <body>
-
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">EC's Brick Oven & Grill </a>
+                <a class="navbar-brand" href="#">EC's Brick Oven & Grill</a>
             </div>
         </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -27,40 +26,46 @@
             <div class="col-md-3 column">
                 <a href="#"><img id="logo" src="//ericcarraway.com/EZ's/ECs-logo.png" alt="restaurant logo"></a>
                 <div class="list-group">
-                    <a href="//ericcarraway.com/" target="_blank" class="list-group-item"><i class="fa fa-user"></i>  &nbsp; Eric Carraway</a>
-                    <a href="//www.linkedin.com/in/ericcarraway" target="_blank" class="list-group-item"><i class="fa fa-linkedin-square"></i> &nbsp; LinkedIn</a>
-                    <a href="//github.com/ericcarraway/ECsRestaurantMenu" target="_blank" class="list-group-item"><i class="fa fa-github-square"></i> &nbsp; GitHub</a>
+                    <a href="//ericcarraway.com/" target="_blank" class="list-group-item">
+                        <i class="fa fa-user"></i> &nbsp; Eric Carraway
+                    </a>
+                    <a href="//www.linkedin.com/in/ericcarraway" target="_blank" class="list-group-item">
+                        <i class="fa fa-linkedin-square"></i> &nbsp; LinkedIn
+                    </a>
+                    <a href="//github.com/ericcarraway/ECsRestaurantMenu" target="_blank" class="list-group-item">
+                        <i class="fa fa-github-square"></i> &nbsp; GitHub
+                    </a>
                 </div>
                 <div id="project-info">
-                        <strong>EC's Restaurant Menu</strong>
-                        <p>This is an example project built to demonstrate the following skills to potential employers:</p><br />
-                        <p>Front End</p>
-                        <ul>
-                            <li>Backbone.js - MV* pattern, Models, Collections, Views, Events, Templating, Routing, CRUD operations</li>
-                            <li>jQuery, Underscore.js, AJAX requests to a back-end API</li>
-                            <li>HTML, CSS, Twitter Bootstrap</li>
-                        </ul>
-                        <p>Back End</p>
-                        <ul>
-                            <li>ASP.NET Web API RESTful service</li>
-                            <li>Entity Framework ORM</li>
-                            <li>Database:  MS SQL</li>
-                        </ul>
-                        <p>Source Control</p>
-                        <ul>
-                            <li>Git</li>
-                            <li>GitHub</li>
-                        </ul>
-                        Additional
-                        <ul>
-                            <li>Visual Studio</li>
-                            <li>SQL Server Management Studio</li>
-                            <li>Chrome Developer Tools</li>
-                            <li>Chrome Postman (testing & API workflow)</li>
-                            <li>App Harbor: .NET Cloud Platform</li>
-                            <li>FTP + Web Hosting (images at ericcarraway.com)</li>
-                            <li>Image Editing (including personalization of logo) via GIMP</li>
-                        </ul>
+                    <strong>EC's Restaurant Menu</strong>
+                    <p>This is an example project built to demonstrate the following skills to potential employers:</p><br />
+                    <p>Front End</p>
+                    <ul>
+                        <li>Backbone.js - MV* pattern, Models, Collections, Views, Events, Templating, Routing, CRUD operations</li>
+                        <li>jQuery, Underscore.js, AJAX requests to a back-end API</li>
+                        <li>HTML, CSS, Twitter Bootstrap</li>
+                    </ul>
+                    <p>Back End</p>
+                    <ul>
+                        <li>ASP.NET Web API RESTful service</li>
+                        <li>Entity Framework ORM</li>
+                        <li>Database: MS SQL</li>
+                    </ul>
+                    <p>Source Control</p>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                    Additional
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li>SQL Server Management Studio</li>
+                        <li>Chrome Developer Tools</li>
+                        <li>Chrome Postman (testing & API workflow)</li>
+                        <li>App Harbor: .NET Cloud Platform</li>
+                        <li>FTP + Web Hosting (images at ericcarraway.com)</li>
+                        <li>Image Editing (including personalization of logo) via GIMP</li>
+                    </ul>
                 </div>
             </div>
             <!-- TODO: responsiveness / prevent scroll in mobile view, reset to top of list/edit view -->
@@ -80,20 +85,24 @@
     </div>
 
     <!-- data-binding templates inline placed on the HTML page for ease of maintenance and syntax highlighting in the editor -->
-    <!-- definining the type as "text/template" keeps them from being interpreted by the browser as JavaScript -->
+    <!-- defining the type as "text/template" keeps them from being interpreted by the browser as JavaScript -->
+
     <!-- Item List View -->
     <script type="text/template" id="items-list-template">
-        <a href="#/new" class="btn btn-success btn-lg"><i class="fa fa-pencil-square-o"></i>&nbsp; Create New Menu Item</a>
+        <a href="#/new" class="btn btn-success btn-lg">
+            <i class="fa fa-pencil-square-o"></i>&nbsp; Create New Menu Item
+        </a>
         <hr />
         <% _.each(items, function(item) { %>
-
-        <div class="col-3 col-sm-3 col-lg-3 col-xs-4" id="menu-items">
-            <h4><%= htmlEncode(item.get('Name')) %></h4>
-            <img class="food " src="<%= htmlEncode(item.get('PicUrl')) %>" />
-            <h3><%= htmlEncode(item.get('Price')) %> <a class="btn btn-info pull-right" href="#/edit/<%= htmlEncode(item.get('Id')) %>">Edit</a></h3>
-        </div>
+            <div class="col-3 col-sm-3 col-lg-3 col-xs-4" id="menu-items">
+                <h4><%= htmlEncode(item.get('Name')) %></h4>
+                <img class="food " src="<%= htmlEncode(item.get('PicUrl')) %>" />
+                <h3><%= htmlEncode(item.get('Price')) %>
+                    <a class="btn btn-info pull-right" href="#/edit/<%= htmlEncode(item.get('Id')) %>">Edit</a>
+                </h3>
+            </div>
         <% }); %>
-    </script>
+    </script><!-- /Item List View -->
 
     <!-- Edit View -->
     <script type="text/template" id="edit-item-template">
@@ -108,28 +117,31 @@
                 <h4>Picture URL</h4>
                 <input name="PicUrl" type="text" value="<%= item ? item.get('PicUrl') : '' %>" />
                 <hr />
-                <button type="submit" class="btn btn-success"><%= item ? 'Update Item' : 'Create New Item' %> <i class="fa fa-floppy-o"></i></button>
+                <button type="submit" class="btn btn-success"><%= item ? 'Update Item' : 'Create New Item' %>
+                    <i class="fa fa-floppy-o"></i>
+                </button>
 
                 <!-- If this is an update, carry the id in a hidden field, and render a delete button -->
-                <% if(item) { %>
-                <input type="hidden" name="id" value="<%= item.get('Id') %>" />
-                <!-- TODO: perhaps fix CSharp PascalCasing in backend schema to match JavaScript camelCasing convention -->
-                <button data-item-id="<%= item.Id %>" class="btn btn-danger delete">Delete <i class="fa fa-trash"></i></button>
+                <% if (item) { %>
+                    <input type="hidden" name="id" value="<%= item.get('Id') %>" />
+                    <!-- TODO: perhaps fix C# PascalCasing in back-end schema to match JavaScript camelCasing convention -->
+                    <button data-item-id="<%= item.Id %>" class="btn btn-danger delete">
+                        Delete <i class="fa fa-trash"></i>
+                    </button>
                 <% }; %>
             </form>
         </div>
         <div class="col-md-6 column">
-            <% if(item) { %>
-            <img id="edit-image" src="<%= htmlEncode(item.get('PicUrl')) %>" />
+            <% if (item) { %>
+                <img id="edit-image" src="<%= htmlEncode(item.get('PicUrl')) %>" />
             <% }; %>
         </div>
         <hr />
         <h4>Need pictures?</h4>
         <a href="//ericcarraway.com/EZ's/" target="_blank">http://ericcarraway.com/EZ's/</a>
         <p><em>Feel free to delete seeded menu items, but please put some back before you leave!</em></p>
+    </script><!-- /Edit View -->
 
-
-    </script>  <!-- end the edit view -->
     <!-- dependencies -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
