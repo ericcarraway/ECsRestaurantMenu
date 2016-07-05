@@ -1,14 +1,14 @@
 ECsRestaurantMenu
 =================
+### September 2014
 
 Example restaurant menu project using **Backbone.js** on the front end and an **ASP.NET Web API**
 RESTful service on the back end
 
-Although it takes a while to load up, this app is LIVE at
-
 ### http://ecsrestaurantmenu.apphb.com/
 
----
+![ECsRestaurantMenu_view1.png](./screenshots/ECsRestaurantMenu_view1.png)
+![ECsRestaurantMenu_view2.png](./screenshots/ECsRestaurantMenu_view2.png)
 
 This is an example project I built in **September 2014** to demonstrate the following skills to
 potential employers:
