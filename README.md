@@ -10,7 +10,7 @@ Although it takes a while to load up, this app is LIVE at
 
 ---
 
-This is an example project I built in September 2014 to demonstrate the following skills to
+This is an example project I built in **September 2014** to demonstrate the following skills to
 potential employers:
 
 ### Front End
