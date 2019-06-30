@@ -1,4 +1,4 @@
-ECsRestaurantMenu
+DEPRECATED ⛔️ ECsRestaurantMenu
 =================
 ### September 2014
 
